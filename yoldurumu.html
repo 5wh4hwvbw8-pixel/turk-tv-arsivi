@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yol Durumu</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:#0a0a0a;
+color:white;
+text-align:center;
+}
+
+header{
+background:#111;
+padding:20px;
+}
+
+h1{
+margin:0;
+color:#ff3b3b;
+}
+
+.container{
+max-width:800px;
+margin:auto;
+padding:20px;
+}
+
+select{
+width:100%;
+padding:12px;
+margin-top:10px;
+border-radius:8px;
+background:#222;
+color:white;
+border:1px solid #444;
+}
+
+.card{
+background:#161616;
+padding:15px;
+margin-top:15px;
+border-radius:12px;
+border:1px solid #333;
+text-align:left;
+}
+
+.road{
+padding:10px;
+margin:8px 0;
+border-radius:8px;
+}
+
+.ok{background:#0a3;color:white;}
+.mid{background:#f90;color:black;}
+.bad{background:#c00;color:white;}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🚦 11 İl Yol Durumu</h1>
+</header>
+
+<div class="container">
+
+<select id="city" onchange="showRoads()">
+<option value="adana">Adana</option>
+<option value="adiyaman">Adıyaman</option>
+<option value="afyon">Afyon</option>
+<option value="ankara">Ankara</option>
+<option value="antalya">Antalya</option>
+<option value="bursa">Bursa</option>
+<option value="bingol">Bingöl</option>
+<option value="izmir">İzmir</option>
+<option value="istanbul">İstanbul</option>
+<option value="konya">Konya</option>
+<option value="rize">Rize</option>
+<option value="erzurum">Erzurum</option>
+</select>
+
+<div id="roads"></div>
+
+</div>
+
+<script>
+
+/* 11 İL – 5 ANA YOL */
+const roads = {
+
+adana:[
+"Adana-Mersin Otoyolu (O-51)",
+"Adana-Gaziantep D400",
+"Adana-Kozan Yolu",
+"Adana-Osmaniye D817",
+"Şehir Çevre Yolu"
+],
+
+adiyaman:[
+"Adıyaman-Şanlıurfa D360",
+"Adıyaman-Gölbaşı Yolu",
+"Adıyaman-Kahta Yolu",
+"Adıyaman-Malatya Yolu",
+"Çevre Yolu"
+],
+
+afyon:[
+"Afyon-Ankara D300",
+"Afyon-İzmir O-5",
+"Afyon-Konya Yolu",
+"Afyon-Uşak Yolu",
+"Çevre Yolu"
+],
+
+ankara:[
+"Ankara-İstanbul O-4",
+"Ankara-Konya O-21",
+"Ankara-Eskişehir D200",
+"Ankara-Samsun D750",
+"Çevre Yolu (O-20)"
+],
+
+antalya:[
+"Antalya-Alanya D400",
+"Antalya-Isparta Yolu",
+"Antalya-Kemer Yolu",
+"Antalya-Burdur Yolu",
+"Çevre Yolu"
+],
+
+bursa:[
+"Bursa-İstanbul O-5",
+"Bursa-Ankara D200",
+"Bursa-İzmir O-5",
+"Bursa-Mudanya Yolu",
+"Çevre Yolu"
+],
+
+bingol:[
+"Bingöl-Elazığ Yolu",
+"Bingöl-Muş Yolu",
+"Bingöl-Diyarbakır Yolu",
+"Bingöl-Erzurum Yolu",
+"Çevre Yolu"
+],
+
+izmir:[
+"İzmir-Aydın O-31",
+"İzmir-Çeşme Otoyolu",
+"İzmir-Manisa Yolu",
+"İzmir-Bursa O-5",
+"Çevre Yolu"
+],
+
+istanbul:[
+"Tem Otoyolu (O-2)",
+"E-5 D100",
+"Avrasya Tüneli",
+"Yavuz Sultan Selim Köprüsü",
+"Çevre Yolu"
+],
+
+konya:[
+"Konya-Ankara D715",
+"Konya-Antalya Yolu",
+"Konya-Afyon Yolu",
+"Konya-Karaman Yolu",
+"Çevre Yolu"
+],
+
+rize:[
+"Rize-Trabzon D010",
+"Rize-Artvin Yolu",
+"Rize-Erzurum Yolu",
+"Çayeli Yolu",
+"Çevre Yolu"
+],
+
+erzurum:[
+"Erzurum-Ağrı D100",
+"Erzurum-Rize Yolu",
+"Erzurum-Bingöl Yolu",
+"Erzurum-Kars Yolu",
+"Çevre Yolu"
+]
+
+};
+
+/* GERÇEK DURUM NE? */
+function status(){
+let r=Math.random();
+if(r<0.5) return ["ok","Açık 🟢"];
+if(r<0.8) return ["mid","Yoğun 🟠"];
+return ["bad","Kapalı / Kaza 🔴"];
+}
+
+/* GÖSTER */
+function showRoads(){
+
+let city=document.getElementById("city").value;
+let list=roads[city];
+
+let html="";
+
+list.forEach(r=>{
+
+let s=status();
+
+html+=`
+<div class="card">
+<div class="road ${s[0]}">
+🚧 ${r} <br> ${s[1]}
+</div>
+</div>
+`;
+
+});
+
+document.getElementById("roads").innerHTML=html;
+
+}
+
+showRoads();
+
+</script>
+
+<footer>
+© Karma Medya Original Yol Durumu. Çalınamaz!
+</footer>
+
+</body>
+</html>

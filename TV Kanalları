@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Türkiye TV Kanal Arşivi</title>
+</head>
+
+<body>
+
+<h1>Türkiye TV Kanal Arşivi</h1>
+
+<div class="kanal">
+
+<h2>Kanal 6</h2>
+
+<p><b>Açılış:</b> 4 Ekim 1992</p>
+<p><b>Kapanış:</b> 2004</p>
+<p><b>Yayın Türü:</b> Genel içerikli televizyon kanalı</p>
+
+<p><b>Sahipleri:</b></p>
+<ul>
+<li>Ahmet Özal dönemi</li>
+<li>Daha sonraki yıllarda çeşitli şirket ve gruplar</li>
+<li>Son döneminde Ciner Grubu</li>
+</ul>
+
+<p><b>Kısa Tarihçe:</b></p>
+<p>
+Kanal 6, 1990'lı yılların önemli özel televizyon kanallarından biridir.
+Haber, eğlence, müzik, dizi ve spor programları yayınlamıştır.
+</p>
+
+<p><b>Logoları:</b></p>
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOCYxRbNlCYyWdPAFr1QelQpqNq-cdf8Auy5ftkgqXIg&s=10" width="150">
+<p>Kanal 6'nın eski logosu</p>
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWY4b0nBZUQOF1aq1iK3xp4tFTY7VoC4z26QVXd6TDGA&s=10" width="150">
+<p>Bir diğer logo dönemi</p>
+
+</div>
+
+</body>
+</html>

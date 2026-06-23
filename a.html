@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Türk TV Arşivi</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:#0f0f0f;
+color:white;
+}
+
+header{
+text-align:center;
+padding:20px;
+background:#111;
+}
+
+.search{
+text-align:center;
+margin:10px;
+}
+
+.search input{
+width:60%;
+padding:10px;
+border-radius:8px;
+border:none;
+}
+
+.counter{
+text-align:center;
+margin:10px;
+color:#ff3b3b;
+}
+
+.grid{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+padding:15px;
+}
+
+.card{
+width:200px;
+background:#1c1c1c;
+border-radius:10px;
+padding:10px;
+border:1px solid #333;
+}
+
+h3{color:#ff3b3b;margin:0;}
+p{opacity:0.7;}
+
+button{
+margin:5px;
+padding:8px;
+background:#222;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+button:hover{background:#ff3b3b;}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>📺 Türk TV Arşivi</h1>
+<p>Karma Medya Special System</p>
+</header>
+
+<div class="search">
+<input id="search" onkeyup="searchChannels()" placeholder="Kanal ara...">
+</div>
+
+<div class="counter">
+📊 Kanal Sayısı: <span id="count">0</span>
+</div>
+
+<div style="text-align:center;">
+<button onclick="filter('all')">Tümü</button>
+<button onclick="filter('ulusal')">Ulusal</button>
+<button onclick="filter('spor')">Spor</button>
+<button onclick="filter('haber')">Haber</button>
+</div>
+
+<div id="grid" class="grid"></div>
+
+<script src="app.js"></script>
+
+
+<footer>
+ © 2026 Karma Medya Original.
+</footer>
+</body>
+</html>

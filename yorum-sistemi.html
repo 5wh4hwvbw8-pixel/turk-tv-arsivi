@@ -1,0 +1,87 @@
+<!-- ⭐ YORUM BÖLÜMÜ -->
+<div style="max-width:600px;margin:30px auto;background:#161616;padding:20px;border-radius:12px;color:white;">
+
+<h2>⭐ Yorum Yap</h2>
+
+<input id="name" placeholder="Adın" 
+style="width:100%;padding:10px;margin:5px 0;border-radius:8px;border:1px solid #444;background:#222;color:white;">
+
+<textarea id="comment" placeholder="Yorumun"
+style="width:100%;padding:10px;margin:5px 0;border-radius:8px;border:1px solid #444;background:#222;color:white;"></textarea>
+
+<select id="star"
+style="width:100%;padding:10px;margin:5px 0;background:#222;color:white;">
+<option value="5">⭐⭐⭐⭐⭐</option>
+<option value="4">⭐⭐⭐⭐</option>
+<option value="3">⭐⭐⭐</option>
+<option value="2">⭐⭐</option>
+<option value="1">⭐</option>
+</select>
+
+<button onclick="addComment()"
+style="width:100%;padding:10px;background:#00d9ff;border:none;border-radius:8px;">
+Gönder
+</button>
+
+<hr>
+
+<h3>📢 Yorumlar</h3>
+<div id="list"></div>
+
+</div>
+
+<script>
+// yorum ekle
+function addComment(){
+
+let name=document.getElementById("name").value;
+let comment=document.getElementById("comment").value;
+let star=document.getElementById("star").value;
+
+if(!name || !comment){
+alert("Boş bırakma!");
+return;
+}
+
+let data=JSON.parse(localStorage.getItem("comments") || "[]");
+
+data.push({
+name:name,
+comment:comment,
+star:star,
+time:new Date().toLocaleString("tr-TR")
+});
+
+localStorage.setItem("comments",JSON.stringify(data));
+
+document.getElementById("name").value="";
+document.getElementById("comment").value="";
+
+loadComments();
+}
+
+// yorumları göster
+function loadComments(){
+
+let data=JSON.parse(localStorage.getItem("comments") || "[]");
+
+let box=document.getElementById("list");
+box.innerHTML="";
+
+data.reverse().forEach((c,i)=>{
+
+box.innerHTML+=`
+<div style="background:#111;padding:10px;margin:10px 0;border-radius:8px;text-align:left;">
+<b>${c.name}</b><br>
+${"⭐".repeat(c.star)}<br>
+${c.comment}<br>
+<small>${c.time}</small>
+</div>
+`;
+
+});
+
+}
+
+loadComments();
+</script>
