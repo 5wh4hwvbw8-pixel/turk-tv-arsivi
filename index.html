@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Türk TV Arşivi</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#0f0f0f;
+color:white;
+}
+
+/* HEADER PRO UPGRADE */
+header{
+background:linear-gradient(90deg,#b30000,#1a0000);
+padding:25px;
+text-align:center;
+box-shadow:0 6px 20px rgba(0,0,0,0.6);
+}
+
+header h1{
+margin:0;
+}
+
+header p{
+opacity:0.8;
+}
+
+/* GRID */
+.grid{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:18px;
+padding:20px;
+}
+
+/* CARD PRO VERSION */
+.card{
+width:200px;
+background:#1c1c1c;
+border-radius:12px;
+overflow:hidden;
+text-decoration:none;
+color:white;
+transition:0.3s;
+border:1px solid #2a2a2a;
+cursor:pointer;
+position:relative;
+}
+
+.card:hover{
+transform:scale(1.07);
+box-shadow:0 10px 25px rgba(0,0,0,0.6);
+border-color:#ff3b3b;
+}
+
+/* IMAGE */
+.card img{
+width:100%;
+height:130px;
+object-fit:contain;
+background:white;
+transition:0.3s;
+}
+
+.card:hover img{
+transform:scale(1.05);
+}
+
+/* INFO */
+.info{
+padding:10px;
+}
+
+h3{
+margin:0;
+color:#ff3b3b;
+font-size:16px;
+}
+
+p{
+margin:5px 0 0;
+font-size:12px;
+opacity:0.8;
+}
+
+/* SECTION TITLE */
+.section{
+margin:20px;
+padding-left:10px;
+border-left:5px solid #ff3b3b;
+font-size:20px;
+color:#ff3b3b;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:20px;
+opacity:0.6;
+}
+
+#splash{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:black;
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:9999;
+animation:fadeOut 2.5s forwards;
+}
+
+#splash h1{
+color:#ff3b3b;
+font-size:40px;
+font-weight:bold;
+letter-spacing:2px;
+}
+
+@keyframes fadeOut{
+0%{opacity:1;}
+70%{opacity:1;}
+100%{opacity:0; visibility:hidden;}
+}
+
+</style>
+
+</head>
+
+<div id="splash">
+  <h1>📺 Türk TV Arşivi</h1>
+</div>
+
+<body>
+
+<header>
+<h1>📺 Türk TV  Arşivi</h1>
+<p>1968’den günümüze Türk televizyon ve radyo tarihi</p>
+</header>
+<a class="card" href="hava-ve-saat.html">
+<div class="info">
+<h3>Türkiye Canlı Hava ve Saat</h3>
+</div>
+</a>
+
+<a class="card" href="tvtarihce.html">
+<div class="info">
+<h3>Türkiye TV Kronolojisi</h3>
+</div>
+</a>
+
+<a class="card" href="efsanelogolar.html">
+<div class="info">
+<h3>Türk TV Kanallarımızın Efsane Logoları</h3>
+</div>
+</a>
+
+
+
+<!-- 📼 NOSTALJİ -->
+<div class="section">📼 Nostalji Kanalları</div>
+
+<div class="grid">
+
+<a class="card" href="kanal6.html">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOCYxRbNlCYyWdPAFr1QelQpqNq-cdf8Auy5ftkgqXIg&s=10">
+<div class="info">
+<h3>Kanal 6</h3>
+<p>1992 - 2004</p>
+</div>
+</a>
+
+<a class="card" href="tgrt.html">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgo-uHtxd5sJfgSrebt4jCT00KTBqfVlXGYFWiIfiZrw&s=10">
+<div class="info">
+<h3>TGRT</h3>
+<p>1993 - 2006</p>
+</div>
+</a>
+<a class="card" href="tnt-turkiye.html">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAmynVz4vFm1Y4ZeLC8PzCx0unQXwkjhaPOU51Oo516g&s=10">
+<div class="info">
+<h3>TNT Türkiye</h3>
+<p>2008 - 2012</p>
+</div>
+</a>
+
+<a class="card" href="flash-tv.html">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVvOA-0NBr2AWl5CzF4exV169yfC8U01p6Vn-PATHYHw&s=10">
+<div class="info">
+<h3>Flash TV</h3>
+<p>1992 - 2022</p>
+</div>
+</a>
+
+<a class="card" href="super-kanal.html">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0aT2kmp04CnSTBxt6mGRg8lGTuGvAGIejcejXKBfX0Q&s=10">
+<div class="info">
+<h3>Süper Kanal</h3>
+<p>90’lar</p>
+</div>
+</a>
+
+<a class="card" href="sineklasik.html">
+<img src="">
+<div class="info">
+<h3>SineKlasik</h3>
+<p>90'lar veya 2000'ler</p>
+</div>
+</a>
+
+</div>
+
+<!-- ⚽ SPOR KANALLARI-->
+ <div class="section">Spor Kanalları</div>
+<div class="grid">
+
+<a class="card" href="ntvspor.html">
+<img src="https://assets.goal.com/images/v3/blt37309e212c862476/82df312ad2718984df123cea3acaf02a250600ff.jpg?auto=webp&format=pjpg&width=3840&quality=60">"
+<div class="info">
+<h3>NTV Spor</h3>
+<p>2008-2018</p>
+</div>
+</a>
+
+<a class="card" href="aspor.html">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9X_Ii_jLm4wPozphvjnAJWELRRE49n8WiS_q0tmf11w&s=10">
+<div class="info">
+<h3>A Spor</h3>
+<p>2014 - Günümüz</p>
+</div>
+</a>
+
+</div>
+
+<!-- 📡 ULUSAL -->
+<div class="section">📡 Ulusal Kanallar</div>
+
+<div class="grid">
+
+<a class="card" href="star-tv.html">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4U5hFs3CK9n_lN-tFDVAFmw1gKg9LeLQctjezLLbzrA&s=10">
+<div class="info">
+<h3>Star TV</h3>
+<p>1990 - Günümüz</p>
+</div>
+</a>
+
+<a class="card" href="show.html">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3zS-yGL8g-QLV2qe0XKbn-YnmTNSkif2-bO2vT2yHFQ&s=10">
+<div class="info">
+<h3>Show TV</h3>
+<p>1992 - Günümüz</p>
+</div>
+</a>
+
+<a class="card" href="kanal-d.html">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlxni82KKMR9nfc_FYJDHntrkgE6e14sVlEcilnc_iiQ&s=10">
+<div class="info">
+<h3>Kanal D</h3>
+<p>1993 - Günümüz</p>
+</div>
+</a>
+<a class="card" href="kanal7.html">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf43nGkX6zAYIifl22dbdACNzirqz-ez6ABSfpTjPD7A&s=10">
+<div class="info">
+<h3>Kanal 7</h3>
+<p>1994 - Günümüz</p>
+</div>
+</a>
+<a class="card" href="trt1.html">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBqg5YsLFdMrHVt4G5ztvHXgX76URWQx2newpJ-6Ky&s=10">
+<div class="info">
+<h3>TRT 1</h3>
+<p>1968 - Günümüz</p>
+</div>
+</a>
+
+<a class="card" href="trt2.html">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGuqrYAtlw1Neoet5Rn2j3U9kKuXucE_RUCNEq7BGROw&s=10">
+<div class="info">
+<h3>TRT 2</h3>
+<p>1986 - Günümüz</p>
+</div>
+</a>
+
+<a class="card" href="atv.html">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY0tkpsEcbgnNaib9rKslwP1RKbIf11-6ddVqwvmwmpA&s=10">
+<div class="info">
+<h3>ATV</h3>
+<p>1993 - Günümüz</p>
+</div>
+</a>
+<a class="card" href="tv8.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcTVIrTndMyj_EUyl6F9LB8Zs7sWFxNgzdWs5RGbjzLg&s=10">
+<div class="info">
+ <h3>TV8</h3>
+<p>1999 - Günümüz</p>
+</div>
+</a>
+<a class="card" href="tv2.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmPyyApsaBu2kTPSvvSRJ9fA4uchfRF5uoNFuE5_IYsw&s=10">
+<div class="info">
+ <h3>TV2 (teve2)</h3>
+<p>2012 - Günümüz</p>
+</div>
+</a>
+<a class="card kanal" href="now.html">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKylrQJfRxvyGP_u6BUbkXaIes-nHQO3NrzcvUgyjiBA&s=10">
+<div class="info">
+<h3>NOW TV (FOX)</h3>
+<p>2007 - Günümüz</p>
+</div>
+</a>
+
+</div>
+
+<!-- 📰 BELGESEL VE ULUSLARASI -->
+<div class="section">📰 Belgesel ve Uluslararası Kanallar</div>
+
+<div class="grid">
+
+  <a class="card" href="ucankus.html">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyZHeLWsACKx--8pLVz6UvxNKmEn_SbXwpYFpJSMykgg&s=10"">
+<div class="info">
+<h3>Uçankuş TV</h3>
+<p>2016 - Günümüz</p>
+</div>
+</a>
+
+<a class="card" href="tgrt-belgesel.html">
+<img src="https://www.tgrtbelgesel.com.tr/wp-content/uploads/2022/12/TGRT_Belgesel_Frekanslar.jpg">
+<div class="info">
+<h3>TGRT Belgesel</h3>
+<p>2014 - Günümüz</p>
+</div>
+</a>
+
+</div>
+
+
+
+<!-- 📰 HABER & EKONOMİ -->
+<div class="section">📰 Haber & Ekonomi Kanalları</div>
+
+<div class="grid">
+
+<a class="card" href="ntv.html">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMipp4k8oG27_Lj_sFLtbVVARASeQ1zD4zbl_tsAbdcg&s=10">
+<div class="info">
+<h3>NTV</h3>
+<p>1996 - Günümüz</p>
+</div>
+</a>
+
+<a class="card" href="a-haber.html">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMipp4k8oG27_Lj_sFLtbVVARASeQ1zD4zbl_tsAbdcg&s=10">
+<div class="info">
+<h3> A Haber</h3>
+<p>2011 - Günümüz</p>
+</div>
+</a>
+
+<a class="card" href="haberturk.html">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh0YgByNGDkK39c3blYXsyXSJi9HPfjhKgdGvhY-xGGA&s=10">
+<div class="info">
+<h3>HaberTürk TV</h3>
+<p>2001 - Günümüz</p>
+</div>
+</a>
+
+<a class="card" href="cnnturk.html">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS16nGdzmwAiqg4khIZz1GWpd2Yb9P8VOcIVhTmxsqGCw&s=10">
+<div class="info">
+<h3>CNN Türk TV</h3>
+<p>1999 - Günümüz</p>
+</div>
+</a>
+
+
+<a class="card" href="trthaber.html">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkwPvZmXDnKb_diPaKmA2f9qA2LYVcg0OzIYp8TMTOuw&s=10">
+<div class="info">
+<h3>TRT Haber</h3>
+<p>2010 - Günümüz</p>
+</div>
+</a>
+
+<a class="card" href="bloomberght.html">
+<img src="https://geoim.bloomberght.com/l/2018/01/27/ver1737820673/2090565/jpg/640x360">
+<div class="info">
+<h3>Bloomberg HT</h3>
+<p>2010 - Günümüz</p>
+</div>
+</a>
+
+<a class="card" href="tele1tv.html">
+<img src="https://yetkinreport.com/wp-content/uploads/2025/10/1761326341686-tele-1-ozel.jpg">
+<div class="info">
+<h3>TELE1</h3>
+<p>2017 - Günümüz</p>
+</div>
+</a>
+
+</div>
+
+<div class="section">🎧 Karma Radyosu</div>
+
+<div class="grid">
+
+<a class="card" onclick="playMusic('https://youtu.be/EHkdxDVMKOA?si=8HXqT7U44RThykpl')">
+<div class="info">
+<h3>🎵 Can ATİLLA-Rumeli Hisarı'nın Yapılışı</h3>
+<p>Play</p>
+</div>
+</a>
+
+<a class="card" onclick="playMusic('https://youtu.be/liTfD88dbCo?si=y-MfzRFto3vTOLbA')">
+<div class="info">
+<h3>🎵 Ed Sheeran-Shape Of You </h3>
+<p>Play</p>
+</div>
+</a>
+
+<a class="card" onclick="playMusic('https://youtu.be/zfkzSJHKdhg?si=kFiJEXIBbBHChm-L')">
+<div class="info">
+<h3>🎵 Tarkan - Dudu </h3>
+<p>Play</p>
+</div>
+</a>
+
+</div>
+
+
+
+
+
+</div>
+
+<footer>
+© 2026 Karma Medya PRO.
+  Tüm hakları Karma Medya'ya aittir. İzinsiz alınamaz veya çalınamaz!
+</footer>
+<script>
+setTimeout(() => {
+  document.getElementById("splash").style.display = "none";
+}, 2500);
+</script>
+</body>
+</html>
